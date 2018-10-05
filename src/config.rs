@@ -56,6 +56,7 @@ pub struct SpotifydConfig {
     pub player_config: PlayerConfig,
     pub session_config: SessionConfig,
     pub onevent: Option<String>,
+    pub ap_port: Option<String>,
 }
 
 impl Default for SpotifydConfig {
@@ -78,6 +79,7 @@ impl Default for SpotifydConfig {
                 user_agent: version::version_string(),
                 device_id: device_id("Spotifyd"),
                 proxy: None,
+                ap_port: None,
             },
             onevent: None,
         }
